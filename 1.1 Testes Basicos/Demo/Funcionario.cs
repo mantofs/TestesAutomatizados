@@ -13,13 +13,15 @@ namespace Demo
     {
       this.Nome = string.IsNullOrEmpty(nome) ? "Fulano" : nome;
 
+      DefinirSalario(salario);
+      DefinirHabilidades();
     }
 
     private void DefinirSalario(double salario)
     {
 
       if (salario < 500) throw new Exception("Salário inferior ao permitido");
-
+      this.Salario = salario;
       if (salario > 7999) NivelProfissional = NivelProfissional.Senior;
       else if (salario > 1999) NivelProfissional = NivelProfissional.Pleno;
       else NivelProfissional = NivelProfissional.Junior;
