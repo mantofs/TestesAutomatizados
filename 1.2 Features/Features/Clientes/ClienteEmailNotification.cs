@@ -1,6 +1,8 @@
+using MediatR;
+
 namespace Features.Clientes
 {
-  public class ClienteEmailNotification
+  public class ClienteEmailNotification : INotification
   {
     private string Origem;
     private string Email;
